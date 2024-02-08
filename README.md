@@ -2,14 +2,21 @@
 
 # Requirements
 
-- Python 3.5 +
-- Scikit-Learn (latest version)
-- Numpy (+ mkl for Windows)
-- Matplotlib
+Python 3.5
+keras==2.3.1
+tensorflow==2.9.3
+scikit-learn==0.23.2^+
+numpy ^+
+
+- or mkl for Windows
+  matplotlib ^+
+  opencv-python
 
 # Usage
 
-**1.** Download the four MNIST dataset files from this link:
+# Dylan Note: All X(Char) steps are already included with this pushed code. Feel free to skip straight to 1.
+
+**Xa.** Download the four MNIST dataset files from this link:
 
 ```
 curl -O http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
@@ -18,7 +25,7 @@ curl -O http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
 curl -O http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
 ```
 
-**2.** Unzip and place the files in the dataset folder inside the MNIST_Dataset_Loader folder under each ML Algorithm folder i.e :
+**Xb.** Unzip and place the files in the dataset folder inside the MNIST_Dataset_Loader folder under each ML Algorithm folder i.e :
 
 ```
 KNN
@@ -32,7 +39,7 @@ KNN
 
 Do this for SVM and RFC folders and you should be good to go.
 
-**3.** To run the code, navigate to one of the directories for which you want to run the code using command prompt:
+**1.** To run the code, navigate to one of the directories for which you want to run the code using command prompt:
 
 ```
 cd 1. K Nearest Neighbors/
@@ -58,7 +65,7 @@ Alternatively, you can also use PyCharm to run the code and run the ".py" file i
 
 Repeat the steps for SVM and RFC code.
 
-**4.** To run the CNN code, you don't need to provide in the MNIST dataset as it'll be downloaded automatically.
+**2.** To run the CNN code, you don't need to provide in the MNIST dataset as it'll be downloaded automatically.
 
 Just run the file as :
 
@@ -74,7 +81,7 @@ python3 CNN_MNIST.py
 
 and it should run fine.
 
-**5.** If you want to save the CNN model weights after training, run the code with the following arguments:
+**3.** If you want to save the CNN model weights after training, run the code with the following arguments:
 
 ```
 python CNN_MNIST.py --save_model 1 --save_weights cnn_weights.hdf5
@@ -88,7 +95,7 @@ python3 CNN_MNIST.py --save_model 1 --save_weights cnn_weights.hdf5
 
 and it should save the model weights in the same directory.
 
-**6.** To load the saved model weights and avoid the training time again, use the following command:
+**4.** To load the saved model weights and avoid the training time again, use the following command:
 
 ```
 python CNN_MNIST.py --load_model 1 --save_weights cnn_weights.hdf5
